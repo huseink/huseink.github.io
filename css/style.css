@@ -48,13 +48,51 @@ p{
   font-family: 'Noto Sans HK Thin';
 }
 
-.column.center{
+.center{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .logo{
   margin:10px;
   margin-left: 20px;
+}
+
+.tl-html,
+.tl-css,
+.tl-bt {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  font-size: 8rem;
+}
+
+.tl-html h1.subtitle,
+.tl-css h1.subtitle,
+.tl-bt h1.subtitle{
+  padding-top: 2rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.tl-html{
+  color:#DD4B25;
+}
+.tl-css{
+  color:#0170BA;
+}
+.tl-bt{
+  color:#664196;
+}
+.tools{
+  border-bottom: 2px solid #6d6d67;
+}
+
+.resim{
+  border-radius: 5px;
+  width: 400px;
+  -webkit-box-shadow: 6px 10px 59px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 59px -17px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 59px -17px rgba(0,0,0,0.75);
 }
