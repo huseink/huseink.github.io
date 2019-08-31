@@ -257,6 +257,9 @@ a {
         background: linear-gradient(180deg, rgba(35, 36, 40, 1) 0%, rgba(13, 13, 13, 1) 100%);
     }
 
+    .project-tile{
+        filter:blur(0);
+    }
     .project-img{
         width: 300px;
     }
