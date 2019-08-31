@@ -219,7 +219,7 @@ a {
         justify-content: center;
         align-content: center;
         height: 30%;
-        max-width:96%;
+        max-width:97%;
         overflow-x: hidden;
     }
     .nav-title {
@@ -289,5 +289,11 @@ a {
     .copy {
         color: white;
         margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #navbar {
+        max-width:96%;
     }
 }
