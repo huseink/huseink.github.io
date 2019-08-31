@@ -211,7 +211,7 @@ a {
         max-width:100%;
         overflow-x: hidden;
     }
-    
+
     #navbar {
         position: absolute;
         grid-template-columns: 1fr;
@@ -219,7 +219,8 @@ a {
         justify-content: center;
         align-content: center;
         height: 30%;
-        width: 100%;
+        max-width:96%;
+        overflow-x: hidden;
     }
     .nav-title {
         margin: 0 auto;
