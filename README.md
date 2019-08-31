@@ -1,1 +1,1 @@
-Pure HTML & CSS Portfolio
+Personal Portfolio - Pure HTML & CSS / Responsive 
