@@ -1,156 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK+Thin&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@0.2.0/dist/css/bulma-divider.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>
-    Husein Kantarci | FullStack
-  </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Husein Kantarci | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <section class="hero is-fullheight">
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <img class="logo" src="img/logo.png" style="max-width:100px; max-height:50px;">
-      </div>
-      <div class="navbar-end">
-        <a href="#" class="navbar-item is-size-5 is-tab">
-          <i class="fa fa-home" style="padding-right:10px;"></i>
-          Home
-        </a>
-        <a href="#tools" class="navbar-item is-size-5 is-tab">
-           <i class="fas fa-tools" style="padding-right:10px;"></i>
-          Tools
-        </a>
-        <a href="#portfolio" class="navbar-item is-size-5 is-tab">
-         <i class="fab fa-artstation" style="padding-right:10px;"></i>
-          Portfolio
-        </a>
-        <a href="#contact" class="navbar-item is-size-5 is-tab">
-          <i class="far fa-address-book" style="padding-right:10px;"></i>
-          Contact
-        </a>
-        <div class="navbar-item">
-          <div class="buttons">
-            <a href="#mail" class="button is-info is-outlined is-rounded">Say Hello</a>
-          </div>
-        </div>
-      </div>
+
+    <nav id="navbar">
+        <h1 class="nav-title">HK</h1>
+        <ul class="nav-items">
+            <li class="nav-link"><a href="#welcome-section">About</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#social">Social</a></li>
+        </ul>
     </nav>
 
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column has-text-centered">
-              <h1 class="title is-size-3">HUSEIN KANTARCI</h1>
-              <p class="is-size-6 has-text-justified">
-                  “21 Years old Dev. People find me to be an upbeat, self-motivated team player with excellent communication skills. For the past few months I have been studying front-end & back-end web development. This site will include my personal portfolio."
-              </p>
-          </div>
-          <div class="column center">
-            <img src="img/code.png" alt="Coding Picture" style="max-width:150px;">
-          </div>
+    <section id="welcome-section">
+        <h1>Husein Kantarci</h1>
+        <p>Full stack developer to be..</p>
+    </section>
+
+    <section id="projects">
+        <div class="project-tile project-1">
+            <a href="https://codepen.io/huseink/full/rNByxEN" target="_blank">
+                <h1 class="project-title">Product Landing Page</h1>
+                <img src="https://i.ibb.co/zSpxjkL/2.jpg" alt="Project 1" class="project-img">
+            </a>
         </div>
-      </div>
-      </div>
-  </section>
 
-  <section class="hero is-light tools" id="tools">
-      <div class="container has-text-centered">
-        <h1 class="title tools" style="margin-top:40px;">Tools I Use</h1>
-        <hr>
-      </div>
-      <div class="columns is-vcentered" style="margin-top:20px;">
-        <div class="column center tl-html">
-            <i class="fab fa-html5"></i>
-            <h1 class="subtitle">HTML5</h1>
+        <div class="project-tile project-2">
+            <a href="https://codepen.io/huseink/full/YzKWBEm" target="_blank">
+                <h1 class="project-title">Tribute Page</h1>
+                <img src="https://i.ibb.co/x2Rrryx/1.jpg" alt="Project 1" class="project-img">
+            </a>
         </div>
-        <div class="column center tl-css">
-            <i class="fab fa-css3-alt"></i>
-            <h1 class="subtitle">CSS3</h1>
+
+        <div class="project-tile project-3">
+            <a href="https://codepen.io/huseink/full/gOYWogr" target="_blank">
+                <h1 class="project-title">Documentation Project</h1>
+                <img src="https://i.ibb.co/gRv4WmD/3.jpg" alt="Project 1" class="project-img">
+            </a>
         </div>
-        <div class="column center tl-bt">
-            <i class="fab fa-bootstrap"></i>
-            <h1 class="subtitle">BOOTSTRAP 4</h1>
-        </div>
-      </div>
-      </section>
+    </section>
+
+    <section id="social">
+        <a href="https://github.com/huseink" target="_blank" id="profile-link">
+            <i class="fa fa-github"><span class="fa-text">GitHub</span></i>
+            
+        </a>
+
+        <a href="https://twitter.com/huseyinkntrc" target="_blank">
+                <i class="fa fa-twitter"><span class="fa-text">Twitter</span></i>
+            </a>
+            
+        <a href="https://www.instagram.com/huseyinkntrc/" target="_blank">
+                <i class="fa fa-instagram"><span class="fa-text">Instagram</span></i>
+        </a>
+
+        <span class="copy">&copy; Husein Kantarci 2019</span>
+    </section>
 
 
-  <section class="hero is-light has-border-top" id="portfolio">
-      <div class="container">
-        <div class="columns is-multiline" style="margin-top:5px;">
-          <div class="column">
-            <img class="resim" src="https://drscdn.500px.org/photo/306896417/q%3D80_m%3D1000/v2?webp=true&sig=ff10ff4f5afc11dab72e6f68208a8fdd984298b84ca3a8c3bfdd68532a8d30b0" alt="Unity" style="margin-bottom:0px;">
-          </div>
-          <div class="column center is-half">
-            <p>
-              Unreal Engine(currently released as Unreal Engine 4) is a popular and widely-used
-              game engine developed by Epic Games.It is used in many modern AAA games like
-              Epic’s own battle royale shooter Fortnite or other hit games like Psyonix’s
-              ‘Rocket League’.It allows for development across multiple platforms from PC to
-              consoles such as the PS4, Xbox One, and Nintendo Switch. This is part of the reason
-               it is so widely used, due to its flexibility to work between these different platforms.
-            </p>
-          </div>
-          <div class="column center is-half desc">
-            <p>
-              Unreal Engine(currently released as Unreal Engine 4) is a popular and widely-used
-              game engine developed by Epic Games.It is used in many modern AAA games like
-              Epic’s own battle royale shooter Fortnite or other hit games like Psyonix’s
-              ‘Rocket League’.It allows for development across multiple platforms from PC to
-              consoles such as the PS4, Xbox One, and Nintendo Switch. This is part of the reason
-               it is so widely used, due to its flexibility to work between these different platforms.
-            </p>
-          </div>
 
-          <div class="column desc">
-            <img src="img/unity-black.png" alt="Unity" style="max-width:440px;">
-          </div>
-
-          <div class="column desc">
-            <img src="img/visual.png" alt="Unity" style="max-width:310px;">
-          </div>
-
-          <div class="column center is-half desc">
-            <p>
-              Unreal Engine(currently released as Unreal Engine 4) is a popular and widely-used
-              game engine developed by Epic Games.It is used in many modern AAA games like
-              Epic’s own battle royale shooter Fortnite or other hit games like Psyonix’s
-              ‘Rocket League’.It allows for development across multiple platforms from PC to
-              consoles such as the PS4, Xbox One, and Nintendo Switch. This is part of the reason
-               it is so widely used, due to its flexibility to work between these different platforms.
-            </p>
-          </div>
-      </div>
-  </section>
-
-  <section class="hero is-light has-border-top" id="portfolio">
-      <div class="container">
-        <div class="columns is-multiline" style="margin-top:5px;">
-          <div class="column">
-            <p>
-              Email : huseinkantarci@gmail.com
-              Tel : +905050837053
-              Instagram : @huseyinkntrc
-            </p>
-          </div>
-      </div>
-  </section>
-
-  <section class="hero is-light">
-      <div class="container has-text-centered" style="padding:10px">
-        <p>Copyright &copy Husein Kantarci 2019</p>
-      </div>
-      </section>
 
 </body>
+
 </html>
