@@ -51,7 +51,7 @@
         let inputValue = input.value;
 
         if (inputValue != "") {
-          fetch(`http://numbersapi.com/${inputValue}/year`)
+          fetch(`https://numbersapi.com/${inputValue}/year`)
             .then(response => response.text())
             .then(data => {
               fact.style.display = "block";
