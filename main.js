@@ -1,5 +1,5 @@
 const section = document.querySelector("#quote");
-section.style.padding = "1.5em 15em";
+section.style.padding = "0";
 section.style.borderBottom = "0.5px solid rgb(114, 114, 114)";
 
 fetch('https://programming-quotes-api.herokuapp.com/quotes/random/lang/en')
@@ -9,7 +9,6 @@ fetch('https://programming-quotes-api.herokuapp.com/quotes/random/lang/en')
     p.className = "quoteText";
     p.textContent = `${data["en"]} - ${data["author"]}`;
     p.style.color = "#FFFFFF";
-    p.style.padding = "0";
-
+    p.style.margin = "1em 2em";
     section.appendChild(p);
 });
