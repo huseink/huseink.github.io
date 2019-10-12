@@ -14,6 +14,10 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    font-family: 'Poppins', sans-serif;
+    
+}
 /* Navigation Bar */
 
 #navbar {
@@ -202,6 +206,10 @@ a {
 
 ::-webkit-scrollbar-button {
     display: none
+}
+
+#quote{
+    text-align: center;
 }
 
 /* Media Queries */
