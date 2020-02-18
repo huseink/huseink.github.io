@@ -24,7 +24,7 @@ p {
     position: fixed;
     padding: 0.5em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 2fr;
     height: 3em;
     width: 100%;
     align-items: center;
@@ -45,8 +45,6 @@ p {
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
     border-bottom: 1px solid #232426
-    padding: 0;
-    margin-right:0;
 }
 
 .nav-link {
