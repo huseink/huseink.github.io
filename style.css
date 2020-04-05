@@ -110,9 +110,9 @@ a {
     -webkit-transition: filter 1s ease-out;
 }
 
-.project-2 img {
+/*.project-2 img {
     height: 84%;
-}
+}*/
 
 .project-3 {
     grid-column: 1/3;
