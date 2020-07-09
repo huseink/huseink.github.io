@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../src/assets/BG.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #192029;
+  --primary-color:#66fcf1;
+  --secondary-color:#46a29f;
+  --third-color:#c5c6c8;
+  --heart-color:#9e0039;
 }
 
 code {

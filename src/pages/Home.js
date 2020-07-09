@@ -1,20 +1,62 @@
 import React from 'react'
 import homeVector from '../assets/home_vector.svg'
+import bg from '../assets/BG.jpg'
+import styled from 'styled-components'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+const Styles = styled.div`
+    display:flex;
+    height:100vh;
+   
+    align-items:center;
+    
+    .column{
+        align-self:center;
+    }
+    
+    .hero-svg{
+        margin:0 auto;
+        width:25em;
+    }
+    .hero-desc{
+        color:var(--third-color);
+        font-size:1.8rem;
+        padding:0 2em;
+    }
+
+    @media (max-width: 991px) {
+        .column{
+            text-align:center;
+        }
+        .hero-svg{
+            margin:2em auto;
+            width:23em;
+        }
+        
+    }
+
+`;
+
 export default function Home() {
     return (
-        <div className="h-screen flex flex-wrap "
-             style={{background: 'conic-gradient(from 200deg,#1F2833 0%, #0B0C10 100%) 50% 40% / 100% 100% no-repeat'}}
-        >
-            <div className="flex justify-center w-full md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-400  self-center "> 
-                <img  src={homeVector} alt="Home Vector"/>
-             </div>
-            <div className="self-center px-12 sm:px-24 md:px-10 w-full md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-500 font-roboto font-normal text-third text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl ">
-                Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-                Class aptent taciti sociosqu 
-                ad litora torquent per. 
-            </div>
-
-        </div>
+        <Styles>
+                <Container>
+                    <Row >
+                        <Col className="column" sm={12} md={12} lg={6}>
+                            <img className="hero-svg" src={homeVector} alt="Developer SVG" />
+                        </Col>
+                        <Col className="column" sm={12} md={12} lg={6}>
+                            <p className="hero-desc">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                            Class aptent taciti sociosqu
+                            ad litora torquent per.
+                            </p> 
+                        </Col>
+                    </Row>
+                </Container>
+        </Styles>
     )
 }
