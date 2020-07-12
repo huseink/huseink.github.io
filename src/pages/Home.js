@@ -1,6 +1,5 @@
 import React from 'react'
 import homeVector from '../assets/home_vector.svg'
-import bg from '../assets/BG.jpg'
 import styled from 'styled-components'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
