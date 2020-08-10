@@ -2,12 +2,13 @@ import React from 'react'
 import { Container,Col,Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import homeVector from '../assets/home_vector.svg'
+import background from '../assets/BG.jpg'
 
 const Styles = styled.div`
     display:flex;
     height:100vh;
     border-bottom:1px solid var(--primary-color);
-
+    background-image: url(${background});
     align-items:center;
 
     .column{

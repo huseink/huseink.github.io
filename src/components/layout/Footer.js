@@ -5,19 +5,24 @@ import { faGithub, faLinkedin, faTwitter,faInstagram } from "@fortawesome/free-b
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const FooterStyles = styled.footer`
-    padding:3em;
+    padding:2em;
     border-top:1px solid var(--primary-color);
-
+    background-color: #171B24;
     .social-link{
         color:var(--third-color);
-        font-size:2.5em;
-        border:1px solid var(--primary-color);
+        font-size:2.7em;
         border-radius:20px;
         padding:0.2em;
         margin-right:0.5em;
     }
+    .social-link:hover{
+        color: var(--primary-color);
+    }
     .col{
         text-align:center;
+    }
+    p{
+        margin:0;
     }
 
     .created-by{
@@ -48,13 +53,13 @@ export default function Footer() {
                 <Row>
                     <Col>
                         <div className="social-icons">
-                            <a href="https://www.facebook.com/NobakEntertainment/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/huseink" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faGithub} className="social-link" /></a>
-                            <a href="https://www.facebook.com/NobakEntertainment/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/h%C3%BCsein-kantarci-44861b1a2" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} className="social-link" /></a>
-                            <a href="https://www.facebook.com/NobakEntertainment/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://twitter.com/huseinkntrc" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faTwitter} className="social-link" /></a>
-                            <a href="https://www.facebook.com/NobakEntertainment/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/huseinkntrc/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} className="social-link" /></a>
                         </div>
                     </Col>

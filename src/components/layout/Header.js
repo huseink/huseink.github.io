@@ -5,29 +5,33 @@ import styled from 'styled-components'
 
 const Styles = styled.div`
   .navbar{
-    font-family:'Roboto',sans-serif;
-    background-color:#161B23;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background-color: #171B24;
   }
   .navbar-brand{
     font-size:3rem;
-    font-weight:800;
     margin-left:1em;
     color: var(--primary-color);
   }
+  .navbar-brand:hover{
+    color: var(--primary-color);
+  }
   .nav-link{
-    font-weight:500;
     font-size:1.2rem;
-    margin-right:4em;
+    margin-right:2em;
     color: var(--secondary-color) !important;
   }
-  .nav-link:last-child{
-    border:1px solid var(--secondary-color);
+
+  .nav-link:hover{
+    color: var(--primary-color) !important;
   }
-  .navbar-light .navbar-toggler {
-    border-color: rgba(102,252,241,.5) !important;
-  }
+  
 
   @media (max-width: 991px) {
+    .navbar-brand{
+      margin-left:0.2em;
+    }
     .navbar-collapse{
       border:1px solid var(--primary-color);
       padding:0 1em;
@@ -47,8 +51,7 @@ const Styles = styled.div`
 `;
 
 
-export default function Header(props) {
-  const { sections } = props;
+export default function Header({sections}) {
 
   const navLinks = sections.map((section,key) => {
     const navHref = `/${section.toLowerCase()}`;
@@ -58,8 +61,8 @@ export default function Header(props) {
 
   return (
     <Styles>
-      <Navbar collapseOnSelect expand="lg" bg="transparent">
-        <Navbar.Brand href="#home">HK</Navbar.Brand>
+      <Navbar collapseOnSelect expand="lg" variant="dark">
+        <Navbar.Brand href="#">HK</Navbar.Brand>
         <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
