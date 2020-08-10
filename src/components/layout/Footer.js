@@ -67,7 +67,7 @@ export default function Footer() {
                 <Row>
                     <Col>
                         <p className="created-by"><span className="code">&lt; &#47; &gt;</span> with <span className="heart">&#10084;</span> By <a className="husein-k" href="https://www.huseink.tech" target="_blank" rel="noopener noreferrer"> <span className="name">Husein Kantarci</span></a></p>
-                        <p className="year">&copy; {new Date().getFullYear()}</p>
+                        <p className="year">&copy; CSH {new Date().getFullYear()}</p>
                     </Col>
                 </Row>
                 <Row>
