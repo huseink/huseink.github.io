@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import ProjectsThumb from '../components/ProjectsThumb'
 import Hero from '../components/Hero'
 import styled from 'styled-components'
