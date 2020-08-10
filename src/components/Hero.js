@@ -6,10 +6,10 @@ import background from '../assets/BG.jpg'
 
 const Styles = styled.div`
     display:flex;
-    height:100vh;
     border-bottom:1px solid var(--primary-color);
     background-image: url(${background});
     align-items:center;
+    padding:9em 0;
 
     .column{
         align-self:center;
@@ -26,6 +26,8 @@ const Styles = styled.div`
     }
 
     @media (max-width: 991px) {
+        padding:4em 0;
+
         .column{
             text-align:center;
         }
@@ -36,7 +38,7 @@ const Styles = styled.div`
         .hero-desc{
             color:var(--third-color);
             font-size:1.6rem;
-            padding:0 2em;
+            padding:0 0.5em;
         }
     }
 `;

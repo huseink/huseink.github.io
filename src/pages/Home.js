@@ -10,28 +10,29 @@ const Styles = styled.div`
 `;
 export default function Home() {
     const projects = [
-            {
-                id:1,
-                thumbnail: nobak,
-                description: 'Nobak Entertainment Website'
-            },
-            {
-                id:2,
-                thumbnail:nola,
-                description:'Nola Swifty game'
-            },
-            {
-                id:3,
-                thumbnail:nobak,
-                description:'Nobak Site'
-            }
-        ]
-    
-    
+        {
+            id: 1,
+            thumbnail: nobak,
+            description: 'Nobak Entertainment Website'
+        },
+        {
+            id: 2,
+            thumbnail: nola,
+            description: 'Nola Swifty game'
+        },
+        {
+            id: 3,
+            thumbnail: nobak,
+            description: 'Nobak Site'
+        }
+        
+    ]
+
+
     return (
         <Styles>
             <Hero />
-            <ProjectsThumb projects={projects}/>
+            <ProjectsThumb projects={projects} />
         </Styles>
     )
 }
