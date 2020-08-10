@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectsThumb from '../components/ProjectsThumb'
+import RecentProjects from '../components/RecentProjects'
 import Hero from '../components/Hero'
 import styled from 'styled-components'
 import nobak from '../assets/workThumbnails/nobak-web.jpg'
@@ -32,7 +32,7 @@ export default function Home() {
     return (
         <Styles>
             <Hero />
-            <ProjectsThumb projects={projects} />
+            <RecentProjects projects={projects} />
         </Styles>
     )
 }

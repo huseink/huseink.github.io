@@ -40,7 +40,7 @@ const Styles = styled.div`
     }
 `;
 
-export default function ProjectsThumb({projects}) {
+export default function RecentProjects({projects}) {
     const projectThumbnail = projects.map((project)=>{
         return <Col key={project.id} sm={12} md={6} lg={4}>
                     <Card image={project.thumbnail} />
