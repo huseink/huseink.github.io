@@ -9,8 +9,7 @@ const Styles = styled.div`
   
 `;
 export default function Home() {
-    const [projects,setProjects] = useState(
-        [
+    const projects = [
             {
                 id:1,
                 thumbnail: nobak,
@@ -27,7 +26,6 @@ export default function Home() {
                 description:'Nobak Site'
             }
         ]
-    );
     
     
     return (
