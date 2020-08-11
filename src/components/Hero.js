@@ -9,7 +9,7 @@ const Styles = styled.div`
     border-bottom:1px solid var(--primary-color);
     background-image: url(${background});
     align-items:center;
-    padding:9em 0;
+    height:100vh;
 
     .column{
         align-self:center;
@@ -26,8 +26,6 @@ const Styles = styled.div`
     }
 
     @media (max-width: 991px) {
-        padding:4em 0;
-
         .column{
             text-align:center;
         }
