@@ -6,6 +6,9 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@utils/*": ["src/utils/*"],
-    }
+    },
+    "types": [
+      "node"
+    ],
   }
 }
