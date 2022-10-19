@@ -30,24 +30,17 @@ const {
     <link type="image/png" sizes="16x16" rel="icon" href="/favicon-16.png" />
     <link type="image/png" sizes="32x32" rel="icon" href="/favicon-32.png" />
     <link type="image/png" sizes="96x96" rel="icon" href="/favicon-96.png" />
-    <script type="text/javascript">
-      window.smartlook ||
-        (function (d) {
-          var o = (smartlook = function () {
-              o.api.push(arguments)
-            }),
-            h = d.getElementsByTagName('head')[0]
-          var c = d.createElement('script')
-          o.api = new Array()
-          c.async = true
-          c.type = 'text/javascript'
-          c.charset = 'utf-8'
-          c.src = 'https://web-sdk.smartlook.com/recorder.js'
-          h.appendChild(c)
-        })(document)
-      smartlook('init', 'c0afcf55fd181ae4e6d76cefd8aa41d17ecf9cc8', {
-        region: 'eu',
-      })
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K54Z1CLJQC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-K54Z1CLJQC')
     </script>
   </head>
   <body
