@@ -1,0 +1,22 @@
+---
+import ThemeSwitch from '@components/ThemeSwitch.astro'
+---
+
+<nav
+  class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between py-8"
+>
+  <ul class="flex gap-x-8 font-monsterrat font-medium">
+    <li class="hover:text-gray-700 hover:dark:text-gray-50">
+      <a href="/">Home</a>
+    </li>
+    <li class="hover:text-gray-700 hover:dark:text-gray-50">
+      <a href="/blog">Blog</a>
+    </li>
+    <li class="hover:text-gray-700 hover:dark:text-gray-50">
+      <a href="/snippets">Snippets</a>
+    </li>
+  </ul>
+  <div>
+    <ThemeSwitch />
+  </div>
+</nav>

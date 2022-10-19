@@ -1,0 +1,45 @@
+---
+import BlogPostCard from '@components/BlogPostCard.astro'
+import Base from '@layouts/Base.astro'
+import { APP_CONFIG } from '@utils/config'
+
+const { blogTitle, description } = APP_CONFIG
+
+const allPosts = await Astro.glob('./*.md')
+const sortedPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+)
+
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+  const PAGE_SIZE = 2
+  const allPosts = await Astro.glob('./*.md')
+  const allSortedPosts = allPosts.sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).valueOf() -
+      new Date(a.frontmatter.date).valueOf()
+  )
+  return paginate(allSortedPosts, {
+    pageSize: PAGE_SIZE,
+  })
+}
+---
+
+<Base head={{ title: blogTitle, description }}>
+  <section class="flex flex-col-reverse sm:flex-row items-start pt-10">
+    <div class="flex flex-col pr-8">
+      <h1
+        class="bg-clip-text bg-gradient-to-r from-teal-900 to-teal-500 dark:from-red-300 dark:to-red-900 font-bold text-3xl tracking-tight mb-1 text-transparent"
+      >
+        Posts
+      </h1>
+      <p class="mt-3 text-gray-600 dark:text-gray-400 mb-10">
+        This is a collection of articles I've written in the past.
+      </p>
+    </div>
+  </section>
+  <section>
+    {sortedPosts.map((it) => <BlogPostCard post={it.frontmatter} />)}
+  </section>
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from '@layouts/Base.astro'
+import { APP_CONFIG } from '@utils/config'
+
+const { title, description } = APP_CONFIG
+---
+
+<Base head={{ title, description }}>
+  <article>
+    <slot />
+  </article>
+</Base>

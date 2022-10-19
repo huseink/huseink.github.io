@@ -1,0 +1,21 @@
+---
+import Base from '@layouts/Base.astro'
+import { APP_CONFIG } from '@utils/config'
+
+const { snippetsTitle, description } = APP_CONFIG
+---
+
+<Base head={{ title: snippetsTitle, description }}>
+  <section class="flex flex-col-reverse sm:flex-row items-start pt-10">
+    <div class="flex flex-col pr-8">
+      <h1
+        class="bg-clip-text bg-gradient-to-r from-teal-900 to-teal-500 dark:from-yellow-200 dark:to-pink-800 font-bold text-3xl tracking-tight mb-1 text-transparent"
+      >
+        Code snippets
+      </h1>
+      <p class="mt-3 text-gray-600 dark:text-gray-400 mb-10">
+        This is a collection of code snippets I've used and saved in the past.
+      </p>
+    </div>
+  </section>
+</Base>

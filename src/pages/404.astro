@@ -1,0 +1,19 @@
+---
+import Base from '@layouts/Base.astro'
+import { APP_CONFIG } from '@utils/config'
+
+const { title, description } = APP_CONFIG
+---
+
+<Base head={{ title, description }}>
+  <div class="flex flex-col">
+    <h1
+      class="text-5xl bg-clip-text bg-gradient-to-r from-teal-900 to-teal-500 dark:from-purple-400 dark:to-pink-800 font-bold tracking-tight mb-1 text-transparent"
+    >
+      404
+    </h1>
+    <p class="mb-10 text-gray-600 dark:text-gray-400 mb-5 italic">
+      The page you were looking for doesn't exist.
+    </p>
+  </div>
+</Base>
