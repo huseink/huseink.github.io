@@ -2,7 +2,7 @@
 import Header from '@layouts/Header.astro'
 import Footer from '@layouts/Footer.astro'
 import { APP_CONFIG } from '@utils/config'
-import Scripts from '@components/Scripts.astro'
+import ThemeScript from '@components/ThemeScript.astro'
 export interface Props {
   head: {
     title: string
@@ -34,7 +34,7 @@ const {
   <body
     class="font-monsterrat bg-gray-50 text-gray-800 flex flex-col items-center h-screen h-[100svh] dark:bg-zinc-900 dark:text-gray-400"
   >
-    <Scripts />
+    <ThemeScript />
     <div class="w-full max-w-2xl flex-grow px-8 md:p-0">
       <Header />
       <slot />

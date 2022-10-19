@@ -2,10 +2,9 @@
 ---
 
 <script is:inline>
-  // Set "light" theme as default
-  // if (!localStorage.theme) {
-  //   localStorage.theme = "light";
-  // }
+  if (!localStorage.theme) {
+    localStorage.theme = 'dark'
+  }
   if (
     localStorage.theme === 'dark' ||
     (!('theme' in localStorage) &&
