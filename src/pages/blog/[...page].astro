@@ -1,5 +1,5 @@
 ---
-import BlogPostCard from '@components/BlogPostCard.astro'
+import PostItem from '@components/blog-posts/PostItem.astro'
 import Base from '@layouts/Base.astro'
 import { APP_CONFIG } from '@utils/config'
 
@@ -46,7 +46,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
   <section>
     {
       sortedPosts.map((post) => (
-        <BlogPostCard postUrl={post.url} post={post.frontmatter} />
+        <PostItem postUrl={post.url} post={post.frontmatter} />
       ))
     }
   </section>

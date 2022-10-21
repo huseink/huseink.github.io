@@ -5,7 +5,7 @@ description: Int, float, double, string, boolean v.b
 locale: EN
 tags:
   - python
-date: 2022-10-19T13:10:23.402Z
+date: 2022-09-01T13:10:23.402Z
 hidden: True
 ---
 
@@ -21,31 +21,41 @@ Python'da bir değişken **tanımlamak** için değişkeninize bir **isim** verm
 
 En basit örneği matematikten de bildiğimiz ve sık sık kullandığımız **"x"** değişkeni olabilir.
 
-    x = 2
-    y = 5
-    z = 7
+```python
+x = 2
+y = 5
+z = 7
+```
 
 Kod örneğindeki gibi bir tanımlama ve atama yapıldığı takdirde artık bilgisayar belleğinde x, y, z değişkenleri yer almış olur. Bu değişkenler daha sonra kullanılabilir veya yeniden atama yapılabilir.
 
 Örneğin:
 
-    print(x)
-    print(y)
+```python
+print(x)
+print(y)
+```
 
 Program çıktısı:
 
-    2
-    5
+```
+2
+5
+```
 
 ### Aynı anda birden fazla değişken tanımlaması ve değer ataması
 
-    a = b = c = 1
+```python
+a = b = c = 1
+```
 
 Bu kod satırı çalıştığında a, b, c diye üç tane değişken oluşturulmuş olur ve üç değişkenin de değeri 1 olur.
 
 Tek satırda farklı değere sahip değişkenler oluşturmak için değişkenler ve değerler virgül ile ayrılır:
 
-    a,b,c = 1,2,5
+```python
+a,b,c = 1,2,5
+```
 
 Bu kod satırı çalıştığında ise yine a b c olmak üzere üç değişken oluşturulur. Fakat bu sefer
 a nın değeri 1, b nin değeri 2, c nin değeri de 5 tir
@@ -67,8 +77,10 @@ Python'un veri tipleri:
 
 Sayı veri türleri sayısal değerleri saklar. Örneğin -
 
-    a = 1
-    b = 10
+```python
+a = 1
+b = 10
+```
 
 Python **dört** farklı **sayısal** **türü** destekler -
 
@@ -87,13 +99,15 @@ Python'daki **dizeler** (string), **tırnak** işaretleri içinde gösterilen bi
 
 Artı (+) işareti dize birleştirme operatörüdür ve yıldız işareti (\*) tekrarlama operatörüdür.
 
-    str =  'Hello World!'
+```python
+str =  'Hello World!'
 
-    print(str) # Ekranda yazının tamamını gösterir
-    print(str[0])  # Ekranda yazının ilk karakterini gösterir
-    print(str[2:5])  # Ekranda yazının 3nci karakterinden 5ncü karakterine kadar olan kısmı gösterir
-    print(str *  2)  # Aynı kelimeyi 2 defa gösterir
-    print(str +  "TEST")  # Kelimenin yanına "TEST" ekleyerek  gösterir
+print(str) # Ekranda yazının tamamını gösterir
+print(str[0])  # Ekranda yazının ilk karakterini gösterir
+print(str[2:5])  # Ekranda yazının 3nci karakterinden 5ncü karakterine kadar olan kısmı gösterir
+print(str *  2)  # Aynı kelimeyi 2 defa gösterir
+print(str +  "TEST")  # Kelimenin yanına "TEST" ekleyerek  gösterir
+```
 
 Program çıktısı:
 
@@ -109,21 +123,27 @@ Program çıktısı:
 
 Listeler bir dereceye kadar C'deki dizilere benzer. Aralarındaki bir fark, bir listeye ait tüm öğelerin **farklı** **veri** **türünde** olabilmesidir.
 
-    list =  [  'Hüsein',  'abcd'  ,  2.23,  5,  72 ]
+```python
+list =  ['Hüsein', 'abcd', 2.23, 5, 72 ]
+```
 
 Listeyi ekranda gösterme:
 
-    print(list) # Tüm listeyi gösterir
-    print(list[0])  # Listenin ilk öğesini gösterir
-    print(list[1:3])  # Listenin 2nci öğesinden 3nü öğesine kadarkileri ekrana gösterir
-    print(list[2:])  # Listenin 3ncü öğesinden başlayarak ekrana gösterir
+```python
+print(list) # Tüm listeyi gösterir
+print(list[0])  # Listenin ilk öğesini gösterir
+print(list[1:3])  # Listenin 2nci öğesinden 3nü öğesine kadarkileri ekrana gösterir
+print(list[2:])  # Listenin 3ncü öğesinden başlayarak ekrana gösterir
+```
 
 Program çıktısı:
 
-    'Hüsein', 'abcd' , 2.23, 5, 72
-    Hüsein
-    2.23, 5
-    5,7
+```
+'Hüsein', 'abcd' , 2.23, 5, 72
+Hüsein
+2.23, 5
+5,7
+```
 
 ## Veri Türü Dönüşümü
 
@@ -131,27 +151,35 @@ Veri tiplerini birbirine dönüştürmek mümkündür.
 
 Örneğin:
 
-    x = 2 # Bu bir int veri tipidir (sayısal veri tipi)
-    print(x*3) # Ekrana 6 yazdırır çünkü sayısal olarak 2 değerini 3 ile çarpar
+```python
+x = 2 # Bu bir int veri tipidir (sayısal veri tipi)
+print(x*3) # Ekrana 6 yazdırır çünkü sayısal olarak 2 değerini 3 ile çarpar
 
-    x = '2' # Bu bir string veri tipidir
-    print(x*3) # Ekrana 222 yazdırır çünkü kelime olarak 2 değerini 3 defa tekrarlar
+x = '2' # Bu bir string veri tipidir
+print(x*3) # Ekrana 222 yazdırır çünkü kelime olarak 2 değerini 3 defa tekrarlar
+```
 
 Bu gibi durumlarda:
 
-    x = '5' # Bu şekilde bir sayısal değeriniz var ise
-    print(x*3) # yazınca ekranda 555 görmemek için string tipini, int'e dönüştürebiliriz
+```python
+x = '5' # Bu şekilde bir sayısal değeriniz var ise
+print(x*3) # yazınca ekranda 555 görmemek için string tipini, int'e dönüştürebiliriz
+```
 
 String veriyi int veriye dönüştürmek için int() fonksiyonu kullanılır.
 İnt veriyi string veriye dönüştürmek için de str() fonksiyonu kullanılırç
 
-    x = '5'
-    y = int(x)
-    print(y*3) # Ekranda 555 yerine 15 görürüz çünkü y, x'in int halini saklar
+```python
+x = '5'
+y = int(x)
+print(y*3) # Ekranda 555 yerine 15 görürüz çünkü y, x'in int halini saklar
+```
 
 Float dönüşümleri için:
 
-    x = float(1)     # x'in değeri 1.0 olur
-    y = float(2.8)   # y'nin değeri 2.8 olur
-    z = float("3")   # z'nin değeri 3.0 olur
-    w = float("4.2") # w'nun değeri 4.2 olur
+```python
+x = float(1)     # x'in değeri 1.0 olur
+y = float(2.8)   # y'nin değeri 2.8 olur
+z = float("3")   # z'nin değeri 3.0 olur
+w = float("4.2") # w'nun değeri 4.2 olur
+```

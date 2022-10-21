@@ -16,4 +16,7 @@ export default defineConfig({
     }),
   ],
   site: 'https://huseink.dev',
+  markdown: {
+    syntaxHighlight: 'prism',
+  },
 })

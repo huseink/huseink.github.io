@@ -21,8 +21,10 @@ Bunun için Python'da **input()** fonksiyonu bulunmaktadır.
 
 Değişkenlere değer atama sırasında **statik** bir değer **yerine**, bu **değeri** **kullanıcıdan** **almak** için kullanılır.
 
-    isim = input('Isminizi giriniz: ')
-    print('Merhaba,  ' + isim)
+```python
+isim = input('Isminizi giriniz: ')
+print('Merhaba,  ' + isim)
+```
 
 Program Çıktısı:
 
@@ -39,8 +41,10 @@ Bu çıktıyı görmemizin nedeni **isim** **değişkenine** dışardan girilmi�
 
 Kullanıcının klavyeden girdiği her değer string ifade olarak kabul edilir. Bu yüzden:
 
-    yas = input('Yaşınızı giriniz: ')
-    print(yas*3)
+```python
+yas = input('Yaşınızı giriniz: ')
+print(yas*3)
+```
 
 gibi bir programımızın olduğunu varsayarsak.
 
@@ -53,8 +57,10 @@ Ekranda 20'nin tekrarlanma sebebi, yas değişkeninin tipinin otomatik string ol
 
 Bu sorunu çözmek için veri alınırken girilecek olan değer **sayısal** **değer** ise **'veri tipi dönüşümü'** yapmaktır:
 
-    yas = int(input('Yaşınızı giriniz: '))
-    print(yas*3)
+```python
+yas = int(input('Yaşınızı giriniz: '))
+print(yas*3)
+```
 
 Bu düzenleme yapıldıktan sonra program çıktısı:
 

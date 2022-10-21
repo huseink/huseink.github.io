@@ -15,11 +15,13 @@ hidden: True
 
 Çözüm:
 
-    yaricap = float(input('Yarıçapı giriniz: '))
+```python
+yaricap = float(input('Yarıçapı giriniz: '))
 
-    alan = (yaricap**2) * 3.14
+alan = (yaricap**2) * 3.14
 
-    print('Dairenin alanı: ' + str(alan))
+print('Dairenin alanı: ' + str(alan))
+```
 
 ## 2
 
@@ -27,10 +29,12 @@ hidden: True
 
 Çözüm:
 
-    isim = input('Isminizi giriniz: ')
-    soyisim = input('Soyisminizi giriniz: ')
+```python
+isim = input('Isminizi giriniz: ')
+soyisim = input('Soyisminizi giriniz: ')
 
-    print(isim + ' - ' + soyisim)
+print(isim + ' - ' + soyisim)
+```
 
 ## 3
 
@@ -38,9 +42,11 @@ hidden: True
 
 Çözüm:
 
-    liste = ["Kırmızı","Yeşil","Beyaz" ,"Siyah"]
-    print(liste[0])
-    print(liste[3])
+```python
+liste = ["Kırmızı","Yeşil","Beyaz" ,"Siyah"]
+print(liste[0])
+print(liste[3])
+```
 
 ## 4
 
@@ -48,8 +54,10 @@ hidden: True
 
 Çözüm:
 
-    sinav_liste = [19,12,2022]
-    print('Sınavın tarihi: ' + str(sinav_liste[0]) + '/' + str(sinav_liste[1]) + '/' + str(sinav_liste[2]))
+```python
+sinav_liste = [19,12,2022]
+print('Sınavın tarihi: ' + str(sinav_liste[0]) + '/' + str(sinav_liste[1]) + '/' + str(sinav_liste[2]))
+```
 
 ## 5
 
@@ -57,12 +65,14 @@ hidden: True
 
 Çözüm:
 
-    isim = input('Isminizi giriniz: ')
-    yas = input('Yaşınızı giriniz: ')
+```python
+isim = input('Isminizi giriniz: ')
+yas = input('Yaşınızı giriniz: ')
 
 
-    if int(yas) < 18:
-      print(isim + '-' + str(yas))
+if int(yas) < 18:
+    print(isim + '-' + str(yas))
+```
 
 ## 6
 
@@ -70,17 +80,19 @@ hidden: True
 
 Çözüm:
 
-    print("Cumhuriyet ne zaman kuruldu?)
-    print('A) 29 Ekim 1923')
-    print('B) 3 Kasım 1922')
-    print('C) 14 Nisan 1918')
-    print('D) 2 Ağustos 1920')
+```python
+print("Cumhuriyet ne zaman kuruldu?)
+print('A) 29 Ekim 1923')
+print('B) 3 Kasım 1922')
+print('C) 14 Nisan 1918')
+print('D) 2 Ağustos 1920')
 
-    cevap = input("Cevabinizi giriniz: ")
+cevap = input("Cevabinizi giriniz: ")
 
-    if cevap == 'A' or cevap == 'a':
-        print("Dogru cevabi girdiniz. Tebrikler!")
-    elif cevap == 'B' or cevap =='b' or cevap =='C' or cevap =='c' or cevap =='D' or cevap == 'd':
-        print("Yanlis cevap tekrar deneyiniz.")
-    else:
-        print("Eksik yada hatali bir tuslama girdiniz. Tekrar deneyiniz.")
+if cevap == 'A' or cevap == 'a':
+    print("Dogru cevabi girdiniz. Tebrikler!")
+elif cevap == 'B' or cevap =='b' or cevap =='C' or cevap =='c' or cevap =='D' or cevap == 'd':
+    print("Yanlis cevap tekrar deneyiniz.")
+else:
+    print("Eksik yada hatali bir tuslama girdiniz. Tekrar deneyiniz.")
+```

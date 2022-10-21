@@ -1,7 +1,7 @@
 ---
 import RecentPostCard from './RecentPostCard.astro'
 
-const allPosts = await Astro.glob('../pages/blog/*.md')
+const allPosts = await Astro.glob('../../pages/blog/*.md')
 const sortedPosts = allPosts
   .sort(
     (a, b) =>

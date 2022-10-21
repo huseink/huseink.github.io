@@ -11,7 +11,7 @@ hidden: True
 
 Örnek problemler olabildiğince Python programlama diline alışmanız için oluşturulmuştur.
 
-(Kendinizi zorlayıp gerektiğinde notlardan veya internetten araştırma yaparak çözmenizi öneririm ama çözümlerde kafanızın karışması veya anlamamanız durumunda çözümlere buradan [ulaşabilirsiniz](/blog/python-bolum-1-cozumler))
+(Kendinizi zorlayıp gerektiğinde notlardan veya internetten araştırma yaparak çözmenizi öneririm ama çözümlerde kafanızın karışması veya anlamamanız durumunda çözümlere [buradan](/blog/python-bolum-1-cozumler) ulaşabilirsiniz)
 
 ## 1
 

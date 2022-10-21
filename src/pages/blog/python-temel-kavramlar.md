@@ -15,7 +15,9 @@ Genel olarak herhangi bir yeni programlama dili öğrenirmeye ekranda **"Merhaba
 
 Python'da herhangi bir **metin** **çıktısı** almak için **print** fonksiyonu kullanılır. Print fonksiyonunu kullanarak **parantezler** **içine** istediğimiz **yazıyı** yazdığımızda, bu yazıyı **terminalde** **çıktı** olarak görürüz.
 
-    print('Hello World!')
+```python
+print('Hello World!')
+```
 
 Program çıktısı:
 
@@ -25,10 +27,12 @@ Metnin **tek** veya **çift tırnak** içine alınması gerektiğini **unutmayı
 
 **print** ifadesi, birden çok metin satırı çıktısı almak için de kullanılabilir.
 
-    print('Hello World!')
-    print('Hello World!')
-    print('Merhaba Dünya!')
-    print('Test')
+```python
+print('Hello World!')
+print('Hello World!')
+print('Merhaba Dünya!')
+print('Test')
+```
 
 Program çıktısı:
 
@@ -45,8 +49,10 @@ Ekranda **"Python öğreniyorum"** yazısını gösteren bir Python kodu yazmay�
 
 Print ekrana sadece yazı yazmak dışında hesaplama yapıp size sonucunu da gösterebilir. Örneğin:
 
-    print(2+3)
-    print(3*5)
+```python
+print(2+3)
+print(3*5)
+```
 
 Program çıktısı:
 
@@ -55,8 +61,10 @@ Program çıktısı:
 
 Basit hesaplamalar yanı sıra karışık formüller de kullanılabilir.
 
-    print(5+(2*3)-2)
-    print((10/2)+5)
+```python
+print(5+(2*3)-2)
+print((10/2)+5)
+```
 
 Program çıktısı:
 
@@ -75,9 +83,11 @@ Pythonda kullanılabilecek matematiksel operatörler arasında **+** (toplama), 
 
 Kod örneği:
 
-    print(13//2)
-    print(2**3)
-    print(7%2)
+```python
+print(13//2)
+print(2**3)
+print(7%2)
+```
 
 Program çıktısı:
 
@@ -93,9 +103,11 @@ Python'da yorum satırı oluşturmak için satırın başına # sembolü konur
 
 Yorum satırları hiçbir şekilde ekranda gözükmez veya kodun çalışmasını etkilemez.
 
-    print('Merhaba dünya')
-    # Bu bir açıklama satırıdır
-    print('Merhaba dünya2')
+```python
+print('Merhaba dünya')
+# Bu bir açıklama satırıdır
+print('Merhaba dünya2')
+```
 
 Program çıktısı:
 

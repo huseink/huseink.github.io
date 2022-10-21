@@ -31,10 +31,12 @@ Koşullar programın **akışını** **değiştiren** ifadelerdir. Ekranda bir i
 
 Örneğin:
 
-    a = 33
-    b = 200
-    if b > a:
-        print("b a'dan büyüktür")
+```python
+a = 33
+b = 200
+if b > a:
+    print("b a'dan büyüktür")
+```
 
 Program çıktısı:
 
@@ -44,10 +46,12 @@ Program çıktısı:
 
 Örneğin:
 
-    a = 255
-    b = 200
-    if b > a:
-        print("b a'dan büyüktür")
+```python
+a = 255
+b = 200
+if b > a:
+    print("b a'dan büyüktür")
+```
 
 Program çıktısı:
 
@@ -59,12 +63,14 @@ Birden fazla koşulun kontrol edilmesi gerekirse de elif ve else ifadeleri kulla
 
 Örneğin:
 
-    a = 255
-    b = 200
-    if b > a:
-        print("b a'dan büyüktür")
-    elif b < a:
-        print("a b'den büyüktür")
+```python
+a = 255
+b = 200
+if b > a:
+    print("b a'dan büyüktür")
+elif b < a:
+    print("a b'den büyüktür")
+```
 
 Program çıktısı:
 
@@ -74,21 +80,25 @@ Program çıktısı:
 
 Python, koddaki **kapsamı** tanımlamak için **girintiye** (**satırın başındaki boşluk**) dayanır. Diğer programlama dilleri genellikle bu amaç için **süslü parantez** kullanır.
 
-    a = 33
-    b = 200
-    if b > a:
-    print("b a'dan büyüktür") # Bu kullanım satır başı girinti olmadığı için hata üretir
+```python
+a = 33
+b = 200
+if b > a:
+print("b a'dan büyüktür") # Bu kullanım satır başı girinti olmadığı için hata üretir
+```
 
 ## elif
 
 elif anahtar kelimesi Pythonda **"önceki koşullar doğru değilse bu koşulu dene"** demenin yoludur.
 
-    a = 33
-    b = 33
-    if b > a:
-        print("b a'dan büyüktür")
-    elif a == b:
-        print("a ve b eşittir")
+```python
+a = 33
+b = 33
+if b > a:
+    print("b a'dan büyüktür")
+elif a == b:
+    print("a ve b eşittir")
+```
 
 Program çıktısı:
 
@@ -98,14 +108,16 @@ Program çıktısı:
 
 else anahtar sözcüğü, **önceki koşullar** tarafından **yakalanmayan** her şeyi **yakalar**.
 
-    a = 200
-    b = 33
-    if b > a:
-        print("b a'dan büyüktür")
-    elif a == b:
-        print("a ve b eşittir")
-    else:
-        print("a b'den büyüktür")
+```python
+a = 200
+b = 33
+if b > a:
+    print("b a'dan büyüktür")
+elif a == b:
+    print("a ve b eşittir")
+else:
+    print("a b'den büyüktür")
+```
 
 Program çıktısı:
 
@@ -115,11 +127,13 @@ Program çıktısı:
 
 **"and"** ve **"or"** anahtar sözcükleri birer mantıksal operatördür ve koşullu ifadeleri birleştirmek için kullanılırlar:
 
-    a = 200
-    b = 33
-    c = 500
-    if a > b and c > a:
-        print("İki koşul da doğrudur")
+```python
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+    print("İki koşul da doğrudur")
+```
 
 Program çıktısı:
 
@@ -127,11 +141,13 @@ Program çıktısı:
 
 **"or"** örneği:
 
-    a = 200
-    b = 33
-    c = 500
-    if a > b or a > c:
-      print("İki koşuldan biri doğrudur")
+```python
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+    print("İki koşuldan biri doğrudur")
+```
 
 ## İç içe if
 
@@ -139,14 +155,16 @@ Program çıktısı:
 
 Örneğin:
 
-    x = 41
+```python
+x = 41
 
-    if x > 10:
-      print("X 10 dan büyüktür")
-      if x > 20:
+if x > 10:
+    print("X 10 dan büyüktür")
+    if x > 20:
         print("ve 20'den büyüktür")
-      else:
+    else:
         print("20'den büyük değildir")
+```
 
 Program çıktısı:
 
