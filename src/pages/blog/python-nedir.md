@@ -5,7 +5,7 @@ description: Nedir ve ne amaçla kullanılır?
 locale: EN
 tags:
   - python
-date: 2022-09-01T13:10:23.402Z
+date: 2022-10-19T13:10:23.402Z
 hidden: True
 ---
 
