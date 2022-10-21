@@ -6,6 +6,15 @@ module.exports = {
       fontFamily: {
         monsterrat: ['Montserrat', 'sans-serif'],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              'text-underline-offset': '5px',
+            },
+          },
+        },
+      },
     },
   },
   darkMode: 'class',

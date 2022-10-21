@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Post.astro
-title: Bölüm 1 Sonu Örnek Çözümler
+title: Bölüm 1 Çözümler
 description:
 locale: EN
 tags:

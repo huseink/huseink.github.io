@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Post.astro
-title: Bölüm 1 Sonu Örnek Problemler
+title: Bölüm 1 Çalışma Soruları
 description:
 locale: EN
 tags:

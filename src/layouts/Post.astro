@@ -32,7 +32,9 @@ const { frontmatter, rawContent } = Astro.props
       </svg>
     </p>
   </div>
-  <article class="prose dark:prose-invert">
+  <article
+    class="prose dark:prose-invert dark:prose-a:text-teal-500 prose-a:font-semibold"
+  >
     <slot />
   </article>
 </Base>
