@@ -1,5 +1,6 @@
 ---
 import type { BlogPost } from '@utils/blogPost'
+import { formatDate } from '@utils/date'
 
 interface Props {
   post: BlogPost
@@ -7,26 +8,18 @@ interface Props {
 }
 
 const { post, postUrl } = Astro.props
-let publishedDate = null
-
-if (post.date) {
-  const dateObj = new Date(post.date)
-  const month = dateObj.getUTCMonth() + 1 //months from 1-12
-  const day = dateObj.getUTCDate()
-  const year = dateObj.getUTCFullYear()
-
-  publishedDate = day + '/' + month + '/' + year
-}
 ---
 
-<div class="flex flex-row items-start justify-between mb-8 cursor-pointer">
+<div
+  class="flex flex-row items-start justify-between mb-6 cursor-pointer hover:bg-gradient-to-l hover:from-gray-200 rounded py-2 hover:bg-gradient-to-l dark:hover:from-zinc-800"
+>
   <a href={postUrl || '#'}>
     <h1 class="font-bold text-lg text-gray-700 dark:text-gray-50">
       {post.title}
     </h1>
-    <p class="text-sm mt-2">
+    <p class="text-sm">
       {post.description ? post.description : 'Still being written'}
     </p>
   </a>
-  <small> {publishedDate}</small>
+  <small class="mr-2"> {formatDate(post.date)}</small>
 </div>
