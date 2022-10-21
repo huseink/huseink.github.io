@@ -3,6 +3,7 @@
 - **Framework**: [Astro](https://astro.build/)
 - **Deployment**: [Github Pages](https://pages.github.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Package manager**: [Pnpm](https://pnpm.io/)
 
 ## Overview
 
