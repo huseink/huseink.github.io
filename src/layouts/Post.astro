@@ -1,12 +1,20 @@
 ---
 import Base from '@layouts/Base.astro'
-import { APP_CONFIG } from '@utils/config'
 
-const { title, description } = APP_CONFIG
+const { frontmatter } = Astro.props
 ---
 
-<Base head={{ title, description }}>
-  <article>
+<Base
+  head={{
+    title: `${frontmatter.title} | Husein Kantarci`,
+    description: frontmatter.description,
+  }}
+>
+  <div class="flex flex-col text-center mb-12 mt-10">
+    <h1 class="text-2xl font-bold dark:text-gray-50">{frontmatter.title}</h1>
+    <p>{frontmatter.description}</p>
+  </div>
+  <article class="prose dark:prose-invert">
     <slot />
   </article>
 </Base>

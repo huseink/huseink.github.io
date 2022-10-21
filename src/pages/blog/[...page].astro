@@ -6,20 +6,24 @@ import { APP_CONFIG } from '@utils/config'
 const { blogTitle, description } = APP_CONFIG
 
 const allPosts = await Astro.glob('./*.md')
-const sortedPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
-)
-
-export async function getStaticPaths({ paginate }: { paginate: any }) {
-  const PAGE_SIZE = 2
-  const allPosts = await Astro.glob('./*.md')
-  const allSortedPosts = allPosts.sort(
+const sortedPosts = allPosts
+  .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
       new Date(a.frontmatter.date).valueOf()
   )
+  .filter((post) => !post.frontmatter.hidden)
+
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+  const PAGE_SIZE = 2
+  const allPosts = await Astro.glob('./*.md')
+  const allSortedPosts = allPosts
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.date).valueOf() -
+        new Date(a.frontmatter.date).valueOf()
+    )
+    .filter((post) => !post.frontmatter.hidden)
   return paginate(allSortedPosts, {
     pageSize: PAGE_SIZE,
   })
@@ -40,6 +44,10 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
     </div>
   </section>
   <section>
-    {sortedPosts.map((it) => <BlogPostCard post={it.frontmatter} />)}
+    {
+      sortedPosts.map((post) => (
+        <BlogPostCard postUrl={post.url} post={post.frontmatter} />
+      ))
+    }
   </section>
 </Base>

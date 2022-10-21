@@ -2,11 +2,13 @@
 import RecentPostCard from './RecentPostCard.astro'
 
 const allPosts = await Astro.glob('../pages/blog/*.md')
-const sortedPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
-)
+const sortedPosts = allPosts
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).valueOf() -
+      new Date(a.frontmatter.date).valueOf()
+  )
+  .filter((post) => !post.frontmatter.hidden)
 ---
 
 <section class="flex flex-col max-w-7xl mx-auto">
@@ -18,6 +20,12 @@ const sortedPosts = allPosts.sort(
     </h1>
   </div>
   <div class="flex gap-6 flex-col md:flex-row">
-    {sortedPosts.map((item) => <RecentPostCard post={item.frontmatter} />)}
+    {
+      sortedPosts
+        .slice(0, 3)
+        .map((item) => (
+          <RecentPostCard postUrl={item.url} post={item.frontmatter} />
+        ))
+    }
   </div>
 </section>

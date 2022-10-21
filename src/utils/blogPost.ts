@@ -5,7 +5,6 @@ export enum Locale {
 
 export interface BlogPost {
   title?: string
-  link?: string
   locale?: Locale
   description?: string
   date?: Date
