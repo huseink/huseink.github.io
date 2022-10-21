@@ -26,4 +26,4 @@ pnpm dev
 
 ## Cloning / Forking
 
-Please review the [license](https://github.com/huseink/huseink.github.io/blob/main/LICENSE.txt)
+Please review the [license](https://github.com/huseink/huseink.github.io/blob/main/LICENSE)
