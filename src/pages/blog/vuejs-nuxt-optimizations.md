@@ -109,3 +109,9 @@ On the application, we often might have CSS that are not being used but take up 
 > **“To optimize the whole, we must sub-optimize the parts.”**
 
 ![](https://lh3.googleusercontent.com/tf5m7_Jbu4LtWha8NzLS2s6a0NdbgP81ii2nJtoDsobj_LCG2UET20BLo-LiCh5FqIXIwVDzonUlhTAXnjXWbgFWDz4fAJlAlhqD19qu4c5E9DGtJb4ZYaPw0wg93qqHleQhXvngHLxJFeekoUjHnH_XsGrkYApd_fbF13dAivAnQuq5nq2i2vt-eFC9)
+
+## Before and After Optimization Results of Mojob's Homepage
+
+![](https://i.ibb.co/FbVPvCF/image-3.png)
+![](https://i.ibb.co/ZxqYQyG/image-1.png)
+![](https://i.ibb.co/zH35zW7/image-2.png)
