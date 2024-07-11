@@ -5,10 +5,11 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@utils/*": ["src/utils/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "types": [
       "node"
     ],
+    "ignoreDeprecations": "5.0"
   }
 }
