@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
-title: Python Eğitimi Notları
-description: Trakya Üniversitesinde verdiğim Python eğitiminin notları
+title: Python Training Notes (Turkish)
+description: Notes from the Python workshop I conducted at Trakya University
 locale: TR
 tags:
   - python
