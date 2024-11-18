@@ -1,16 +1,3 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@utils/*": ["src/utils/*"]
-    },
-    "types": [
-      "node"
-    ],
-    "ignoreDeprecations": "5.0",
-    "skipLibCheck": true
-  }
+  "extends": "astro/tsconfigs/base"
 }
