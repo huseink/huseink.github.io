@@ -1,6 +1,6 @@
 export const APP_CONFIG = {
-  site_name: 'Husein Kantarci - Developer',
-  title: 'Husein Kantarci - Developer',
+  site_name: 'Husein Kantarci - Full Stack Software Engineer',
+  title: 'Husein Kantarci - Full Stack Software Engineer',
   description: 'Personal portfolio',
   blogTitle: 'Blog | Husein Kantarci',
   snippetsTitle: 'Snippets | Husein Kantarci',
