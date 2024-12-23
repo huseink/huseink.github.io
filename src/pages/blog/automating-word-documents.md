@@ -15,6 +15,8 @@ date: 2024-12-23T13:10:23.402Z
 
 ![Photo by [Ed Hardie](https://unsplash.com/@impelling?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/9312/0*-n6rbM97SPubI3eC)
 
+Medium Link: https://medium.com/@huseinkantarci/automating-word-document-creation-with-python-and-fastapi-using-python-docx-template-a92fa4acf7fb
+
 Ever needed to **create** a **Word** document filled with specific content? Better yet, have you wished to **automate** the process so you don’t have to manually update it each time the **context** changes?
 
 Well, look no further — **Python**, as always, has got us covered. With a library called *“[python-docx-template”](https://docxtpl.readthedocs.io/en/latest/)*, dynamically rendering content into a template Word document becomes not only easy but also efficient.
