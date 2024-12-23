@@ -68,7 +68,7 @@ After creating and activating the virtual environment, **install** required **li
     pip install "fastapi[standard]" docx docxtpl pydantic requests
 
 Then, Create a file “**main.py”** with:
-
+```python
     from fastapi import FastAPI
     
     app = FastAPI()
@@ -77,13 +77,13 @@ Then, Create a file “**main.py”** with:
     @app.get("/")
     def read_root():
         return {"Hello": "World"}
-
+```
 If you make a **request** (using Postman, or your browser) to ***“localhost:8000”***, you should get this as the output:
-
+```python
     {
         "Hello": "World"
     }
-
+```
 Now that we have a basic endpoint running, we can start rendering context into Word template file.
 
 Import your **Jinja2** modified Word template file into the root of your project like so:
@@ -91,7 +91,7 @@ Import your **Jinja2** modified Word template file into the root of your project
 ![](https://cdn-images-1.medium.com/max/2000/1*IBOIVtjqQ2i1lCoRI9d1aQ.png)
 
 Modify the main.py file to be:
-
+```python
     from fastapi import FastAPI
     from docxtpl import DocxTemplate, InlineImage
     from pydantic import BaseModel
@@ -198,7 +198,7 @@ Modify the main.py file to be:
         return StreamingResponse(result,
                                  media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                                  headers={"Content-Disposition": "attachment; filename=invoice.docx"})
-
+```
 Now, let’s test the endpoint by sending a **JSON body** and **retrieve** the **generated output**.
 
     {
