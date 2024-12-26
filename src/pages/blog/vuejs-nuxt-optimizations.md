@@ -8,8 +8,6 @@ tags:
 date: 2022-04-28T13:10:23.402Z
 ---
 
-<iframe class="w-full" height="310" src="https://www.youtube.com/embed/7B9mN_tvieY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## 1) Lazy loading and Prefetching
 
 A **method** of loading modules in the application **upon** user **request**. Example case of that is the usage of modals or tooltips. There is no need to load **all** of the modules whenever the page loads. If a modal or such modules are not shown with a page load, they should be **lazy-loaded.**
