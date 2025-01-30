@@ -22,7 +22,8 @@ Whenever a module is imported in a standard way. It will be added as a **node** 
 ### Lazy Loading
 
 This way webpack will bundle the content of the dynamically imported module into a separate file. Which will be used upon a request.
-![](https://lh4.googleusercontent.com/0ehZwJXilTrUWKBNu0d1twxVKdEbNPX_r1VFkEu7KWY42heiFcYCOYOBJgH5G98gEaDyGgcwYQ_N56y0_sbfd-8POH9sxkkcRvgllOxok1EjHd_l_0mIIhH9E4QQELKu5uIJdn95S0JUhro-TF6q10_k97Up53w1bzuVo_2vn4cwW1cCnEzcMxqdRIUj)
+<img width="407" alt="image" src="https://github.com/user-attachments/assets/93c4ee2d-37a0-4345-aa4d-6145265ffe97" />
+
 
 ![](https://lh3.googleusercontent.com/Isl-YBbXcnh36IjEjYXWfj6earohuCbFyOwHxO6dSlYHzBpx5pF-Xf-d9kyZ1beE8WvRTu91p7ymNmEFwZQOIs4tJnpTn7N-RyhbHJ2vrUDKV9sQdTd2UB50_mYIH6KVpnbIut91fuU5pN-aSjfZvQX1PjXCz_icyeHf3MkNFCJ1g1Ubb2qwz-bQhmNX)
 
