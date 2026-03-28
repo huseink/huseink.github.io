@@ -102,13 +102,13 @@ const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-
           </div>
           <div class="flex flex-wrap gap-2">
             {group.skills.slice(0, visibleSkillCount).map((skill) => (
-              <span class="rounded-full border border-teal-200 bg-teal-50/70 px-3 py-1 text-sm text-teal-800 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200">
+              <span class="rounded-full border border-teal-300 bg-teal-50 px-3 py-1 text-sm text-teal-900 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200">
                 {skill}
               </span>
             ))}
             {group.skills.slice(visibleSkillCount).map((skill) => (
               <span
-                class="hidden rounded-full border border-teal-200 bg-teal-50/70 px-3 py-1 text-sm text-teal-800 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200"
+                class="hidden rounded-full border border-teal-300 bg-teal-50 px-3 py-1 text-sm text-teal-900 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200"
                 data-skill-extra={slugify(group.label)}
               >
                 {skill}
@@ -117,7 +117,7 @@ const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-
             {group.skills.length > visibleSkillCount && (
               <button
                 type="button"
-                class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-500 transition hover:border-teal-200 hover:text-teal-800 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-slate-400 dark:hover:border-teal-900/70 dark:hover:text-teal-200"
+                class="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-sm text-slate-600 transition hover:border-teal-300 hover:text-teal-900 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-slate-400 dark:hover:border-teal-900/70 dark:hover:text-teal-200"
                 data-skill-toggle={slugify(group.label)}
                 aria-expanded="false"
               >

@@ -24,10 +24,14 @@
   }
   window.onload = function () {
     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+      document.documentElement.classList.add('theme-animating')
       document.documentElement.classList.toggle('dark')
       localStorage.theme = document.documentElement.classList.contains('dark')
         ? 'dark'
         : 'light'
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('theme-animating')
+      }, 350)
     })
   }
 </script>

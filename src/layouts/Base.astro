@@ -62,4 +62,16 @@ const {
   ::selection {
     background: rgba(13, 148, 136, 0.18);
   }
+
+  html.theme-animating *,
+  html.theme-animating *::before,
+  html.theme-animating *::after {
+    transition:
+      background-color 280ms ease,
+      border-color 280ms ease,
+      color 280ms ease,
+      fill 280ms ease,
+      stroke 280ms ease,
+      box-shadow 280ms ease;
+  }
 </style>
