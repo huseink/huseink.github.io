@@ -2,18 +2,18 @@
 ---
 
 <script is:inline>
-  if (!localStorage.theme) {
-    localStorage.theme = 'dark'
-  }
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+  const hasStoredTheme = 'theme' in localStorage
+
   if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
+    (hasStoredTheme && localStorage.theme === 'dark') ||
+    (!hasStoredTheme && prefersDark.matches)
   ) {
     document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
   }
+
   function attachEvent(selector, event, fn) {
     const matches = document.querySelectorAll(selector)
     if (matches && matches.length) {
@@ -22,6 +22,13 @@
       })
     }
   }
+
+  if (!hasStoredTheme) {
+    prefersDark.addEventListener('change', (event) => {
+      document.documentElement.classList.toggle('dark', event.matches)
+    })
+  }
+
   window.onload = function () {
     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
       document.documentElement.classList.add('theme-animating')
