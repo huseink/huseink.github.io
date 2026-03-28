@@ -4,7 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        monsterrat: ['Montserrat', 'sans-serif'],
+        monsterrat: [
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'sans-serif',
+        ],
       },
       typography: {
         DEFAULT: {

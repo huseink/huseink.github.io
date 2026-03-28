@@ -7,4 +7,5 @@ export const APP_CONFIG = {
   author: 'Husein Kantarci',
   locale_region: 'en-us',
   locale: 'en',
+  analyticsMeasurementId: '',
 }
