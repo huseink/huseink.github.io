@@ -1,0 +1,148 @@
+---
+const visibleSkillCount = 6;
+
+const skillGroups = [
+  {
+    label: "Frontend",
+    skills: [
+      "Angular",
+      "React",
+      "Vue.js",
+      "Vuetify",
+      "shadcn/ui",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    label: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "FastAPI",
+      "Celery",
+      "RabbitMQ",
+      "REST APIs",
+      "API Design",
+      "PostgreSQL",
+      "Redis",
+      "MongoDB",
+      "Elasticsearch",
+      "Elasticsearch APM",
+      "Turborepo",
+    ],
+  },
+  {
+    label: "Infrastructure",
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Grafana",
+      "Prometheus",
+      "Loki",
+      "Kibana",
+      "K9s",
+      "Nginx",
+    ],
+  },
+  {
+    label: "Security",
+    skills: [
+      "Security Hardening",
+      "Zero Trust",
+      "Authentication",
+      "SSO",
+      "SAML",
+      "MFA",
+      "Apache Guacamole",
+      "Identity & Access Management",
+    ],
+  },
+  {
+    label: "AI / ML",
+    skills: [
+      "OpenAI",
+      "LangChain",
+      "Llama 3",
+      "AI",
+      "NLP",
+      "Machine Learning",
+      "Deep Learning",
+      "PGVector",
+      "Vector Search",
+      "LSTM",
+      "BERT",
+      "Data Analysis",
+      "Research",
+      "Twitter API",
+    ],
+  },
+];
+
+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+---
+
+<section class="mt-10 border-t border-slate-200/80 pt-8 dark:border-zinc-800">
+  <h1
+    class="font-semibold text-2xl tracking-tight mb-5 text-slate-900 dark:text-slate-50"
+  >
+    Skills
+  </h1>
+  <div class="space-y-5">
+    {
+      skillGroups.map((group) => (
+        <div class="grid gap-3 md:grid-cols-[11rem_1fr] md:items-start">
+          <div>
+            <h2 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
+              {group.label}
+            </h2>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {group.skills.slice(0, visibleSkillCount).map((skill) => (
+              <span class="rounded-full border border-teal-200 bg-teal-50/70 px-3 py-1 text-sm text-teal-800 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200">
+                {skill}
+              </span>
+            ))}
+            {group.skills.slice(visibleSkillCount).map((skill) => (
+              <span
+                class="hidden rounded-full border border-teal-200 bg-teal-50/70 px-3 py-1 text-sm text-teal-800 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200"
+                data-skill-extra={slugify(group.label)}
+              >
+                {skill}
+              </span>
+            ))}
+            {group.skills.length > visibleSkillCount && (
+              <button
+                type="button"
+                class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-500 transition hover:border-teal-200 hover:text-teal-800 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-slate-400 dark:hover:border-teal-900/70 dark:hover:text-teal-200"
+                data-skill-toggle={slugify(group.label)}
+                aria-expanded="false"
+              >
+                +{group.skills.length - visibleSkillCount} more
+              </button>
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll("[data-skill-toggle]").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const group = toggle.getAttribute("data-skill-toggle");
+      if (!group) return;
+
+      document.querySelectorAll(`[data-skill-extra="${group}"]`).forEach((chip) => {
+        chip.classList.remove("hidden");
+      });
+
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.remove();
+    });
+  });
+</script>

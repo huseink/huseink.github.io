@@ -1,17 +1,23 @@
 ---
-import About from '@components/About.astro'
-import Contact from '@components/Contact.astro'
-import Hobbies from '@components/Hobbies.astro'
-import Timeline from '@components/Timeline.astro'
-import Base from '@layouts/Base.astro'
-import { APP_CONFIG } from '@utils/config'
+import About from "@components/About.astro";
+import Contact from "@components/Contact.astro";
+import Hobbies from "@components/Hobbies.astro";
+import Projects from "@components/Projects.astro";
+import Skills from "@components/Skills.astro";
+import Timeline from "@components/Timeline.astro";
+import Volunteering from "@components/Volunteering.astro";
+import Base from "@layouts/Base.astro";
+import { APP_CONFIG } from "@utils/config";
 
-const { title, description } = APP_CONFIG
+const { title, description } = APP_CONFIG;
 ---
 
 <Base head={{ title, description }}>
   <About />
   <Hobbies />
   <Timeline />
+  <Skills />
+  <Projects />
+  <Volunteering />
   <Contact />
 </Base>

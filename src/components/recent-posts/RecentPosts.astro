@@ -1,7 +1,22 @@
 ---
 import RecentPostCard from './RecentPostCard.astro'
+import type { BlogPost } from '@utils/blogPost'
 
-const allPosts = await Astro.glob('../../pages/blog/*.md')
+type MarkdownPost = {
+  frontmatter: BlogPost & { hidden?: boolean; [key: string]: unknown }
+  url?: string
+}
+
+const allPosts = (Object.values(
+  import.meta.glob('../../pages/blog/*.md', { eager: true })
+) as MarkdownPost[]).map((post) => ({
+  ...post,
+  frontmatter: {
+    ...post.frontmatter,
+    date: new Date(post.frontmatter.date ?? new Date()),
+  },
+}))
+
 const sortedPosts = allPosts
   .sort(
     (a, b) =>

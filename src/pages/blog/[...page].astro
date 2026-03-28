@@ -1,12 +1,24 @@
 ---
 import PostItem from '@components/blog-posts/PostItem.astro'
 import Base from '@layouts/Base.astro'
+import type { BlogPost } from '@utils/blogPost'
 import { APP_CONFIG } from '@utils/config'
 
 const { blogTitle, description } = APP_CONFIG
 
-const allPosts = await Astro.glob('./*.md')
-const sortedPosts = allPosts
+type MarkdownPost = {
+  frontmatter: BlogPost & { hidden?: boolean; [key: string]: unknown }
+  url?: string
+}
+
+const sortedPosts = (Object.values(import.meta.glob('./*.md', { eager: true })) as MarkdownPost[])
+  .map((post) => ({
+    ...post,
+    frontmatter: {
+      ...post.frontmatter,
+      date: new Date(post.frontmatter.date ?? new Date()),
+    },
+  }))
   .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
@@ -16,18 +28,26 @@ const sortedPosts = allPosts
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const PAGE_SIZE = 2
-  const allPosts = await Astro.glob('./*.md')
-  const allSortedPosts = allPosts
+  const sortedPosts = (Object.values(import.meta.glob('./*.md', { eager: true })) as MarkdownPost[])
+    .map((post) => ({
+      ...post,
+      frontmatter: {
+        ...post.frontmatter,
+        date: new Date(post.frontmatter.date ?? new Date()),
+      },
+    }))
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).valueOf() -
         new Date(a.frontmatter.date).valueOf()
     )
     .filter((post) => !post.frontmatter.hidden)
-  return paginate(allSortedPosts, {
+
+  return paginate(sortedPosts, {
     pageSize: PAGE_SIZE,
   })
 }
+
 ---
 
 <Base head={{ title: blogTitle, description }}>

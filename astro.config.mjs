@@ -1,13 +1,12 @@
 import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
-import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    tailwind(),
     partytown({
       // Adds dataLayer.push as a forwarding-event.
       config: {
@@ -15,6 +14,9 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   site: 'https://huseink.dev',
   markdown: {
     syntaxHighlight: 'prism',

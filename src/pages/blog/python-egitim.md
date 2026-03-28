@@ -7,6 +7,7 @@ tags:
   - python
   - temel
 date: 2022-10-19T13:10:23.402Z
+hidden: True
 ---
 
 ## Bölüm 1

@@ -1,17 +1,18 @@
 ---
-import Header from '@layouts/Header.astro'
-import Footer from '@layouts/Footer.astro'
-import { APP_CONFIG } from '@utils/config'
-import ThemeScript from '@components/theme/ThemeScript.astro'
+import Header from "@layouts/Header.astro";
+import Footer from "@layouts/Footer.astro";
+import { APP_CONFIG } from "@utils/config";
+import ThemeScript from "@components/theme/ThemeScript.astro";
+import "../styles/global.css";
 export interface Props {
   head: {
-    title: string
-    description: string
-  }
+    title: string;
+    description: string;
+  };
 }
 const {
   head: { title, description },
-} = Astro.props as Props
+} = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -32,22 +33,23 @@ const {
     <link type="image/png" sizes="96x96" rel="icon" href="/favicon-96.png" />
     <link href="/code-syntax-highlight.css" rel="stylesheet" />
     <script
+      is:inline
       type="text/partytown"
       src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
     ></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || []
+    <script is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-      gtag('config', 'G-K54Z1CLJQC')
+      gtag("js", new Date());
+      gtag("config", "G-K54Z1CLJQC");
     </script>
   </head>
   <body
-    class="font-monsterrat bg-gray-50 text-gray-800 flex flex-col items-center h-screen h-[100svh] dark:bg-zinc-900 dark:text-gray-400"
+    class="font-monsterrat min-h-screen bg-stone-50 text-slate-700 flex flex-col items-center dark:bg-zinc-950 dark:text-slate-400"
   >
-    <div class="w-full max-w-2xl flex-grow px-8 md:p-0">
+    <div class="w-full max-w-3xl flex-grow px-6 pb-10 sm:px-8 md:px-0">
       <Header />
       <slot />
       <Footer />
@@ -55,3 +57,9 @@ const {
     <ThemeScript />
   </body>
 </html>
+
+<style is:global>
+  ::selection {
+    background: rgba(13, 148, 136, 0.18);
+  }
+</style>

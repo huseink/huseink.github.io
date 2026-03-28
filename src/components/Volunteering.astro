@@ -1,0 +1,60 @@
+---
+const visibleSkillCount = 4;
+
+const volunteering = [
+  {
+    title: "Python Programming Instructor",
+    organization: "Trakya University",
+    period: "Oct 2022 - Nov 2022",
+    skills: ["Python", "Teaching", "Mentoring", "Curriculum Support"],
+    description:
+      "Guided Trakya University students through Python programming, making learning engaging with interactive sessions, practical projects, and direct support.",
+  },
+  {
+    title: "Unity Game Development Instructor",
+    organization: "Trakya University",
+    period: "Oct 2019",
+    skills: ["Unity", "Game Development", "Mentoring", "Workshop Facilitation"],
+    description:
+      "Guided a group of students through the fundamentals of Unity game development, encouraging hands-on learning and creative problem solving.",
+  },
+];
+---
+
+<section class="mt-10 border-t border-slate-200/80 pt-8 dark:border-zinc-800">
+  <h1
+    class="font-semibold text-2xl tracking-tight mb-3 text-slate-900 dark:text-slate-50"
+  >
+    Volunteering
+  </h1>
+  <div class="space-y-6">
+    {
+      volunteering.map((item) => (
+        <article class="rounded-xl border border-slate-200 bg-white/60 p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+          <h2 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            {item.title}
+          </h2>
+          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+            {item.organization}
+          </p>
+          <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+            {item.period}
+          </p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {item.skills.slice(0, visibleSkillCount).map((skill) => (
+              <span class="rounded-full border border-teal-200 bg-teal-50/70 px-2.5 py-1 text-xs text-teal-800 dark:border-teal-900/70 dark:bg-teal-950/30 dark:text-teal-200">
+                {skill}
+              </span>
+            ))}
+            {item.skills.length > visibleSkillCount && (
+              <span class="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs text-slate-500 dark:border-zinc-700 dark:bg-zinc-800/70 dark:text-slate-400">
+                +{item.skills.length - visibleSkillCount} more
+              </span>
+            )}
+          </div>
+          <p class="mt-3 leading-7">{item.description}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
