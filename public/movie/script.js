@@ -227,7 +227,7 @@ function renderTicket(index, isReturnVisit = false) {
       <div class="ticket-top">
         <div class="ticket-brand">
           <strong>Çarşamba Sineması</strong>
-          <span>İki kişilik<br>minik seans</span>
+          <span>İki kişilik<br>seans</span>
         </div>
         <p class="ticket-kicker">Seçilen film</p>
         <h3 class="ticket-movie">${escapeHtml(movie.title)}</h3>
@@ -235,15 +235,15 @@ function renderTicket(index, isReturnVisit = false) {
 
       <div class="ticket-bottom">
         <div class="ticket-meta">
-          ${ticketItem("Ne zaman?", CONFIG.time ? `${CONFIG.date} · ${CONFIG.time}` : CONFIG.date)}
-          ${ticketItem("Başrol", CONFIG.guestName)}
+          ${ticketItem("Zaman", CONFIG.time ? `${CONFIG.date} · ${CONFIG.time}` : CONFIG.date)}
+          ${ticketItem("Bilet sahibi", CONFIG.guestName)}
           ${ticketItem("Koltuk A", `${CONFIG.hostFlag} ${CONFIG.hostCountry}`)}
           ${ticketItem("Koltuk B", `${CONFIG.guestFlag} ${CONFIG.guestCountry}`)}
           ${ticketItem("Salon", "Salon 01")}
           ${ticketItem("Bilet tipi", "Uzaktan")}
           ${ticketItem("İade", "Yok öyle bir şey")}
           ${ticketItem("Atıştırmalık", "Mecburi")}
-          ${ticketItem("Kıyafet", "Neyle rahatsan takıl kafana göre")}
+          ${ticketItem("Kıyafet", "Neyle rahatsann takıl kafana göre")}
         </div>
         <div class="barcode" aria-hidden="true"></div>
       </div>
@@ -271,7 +271,7 @@ function ratingTemplate(movie) {
       </div>
       ${savedScore ? `
         <a class="whatsapp-action" href="${whatsappLink(`${movie.title}: ${savedScore}/10`)}" target="_blank" rel="noopener noreferrer">
-          Puanı WhatsApp'tan gönder
+          Puanı WhatsApp'tan müşteri hizmetlerimize gönder
         </a>
       ` : ""}
     </section>
