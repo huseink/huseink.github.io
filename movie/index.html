@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>Çarşamba Sineması</title>
+    <meta
+      name="description"
+      content="Uzakta ama aynı filmde buluşan iki kişi için minicik bir sinema."
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Sinemaya geç</a>
+
+    <main id="main" class="site-shell">
+      <section id="entrance" class="screen entrance-screen active" aria-labelledby="entrance-title">
+        <div class="status-pill" aria-label="Özel gösterim durumu">
+          <span class="status-dot"></span>
+          <span>İki kişilik seans</span>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <span>Salon 01</span>
+          <span>Kapasite: 2</span>
+          <span>Özel</span>
+        </div>
+
+        <div class="entrance-copy">
+          <h1 id="entrance-title">Çarşamba Sineması</h1>
+          <p class="lede">Kurumumuz olayı biraz abarttı</p>
+        </div>
+
+        <div class="admit-card" aria-label="Film gecesi davetiyesi">
+          <div>
+            <span>Davetli</span>
+            <strong data-config="guestName">Nazlican</strong>
+          </div>
+          <div>
+            <span>Gün</span>
+            <strong data-config="date">Çarşamba</strong>
+          </div>
+          <div>
+            <span>Mekan</span>
+            <strong><span data-config="hostCountry">Kosova</span> <span aria-hidden="true">↔</span> <span data-config="guestCountry">Türkiye</span></strong>
+          </div>
+          <p>Giriş: 1 adet</p>
+        </div>
+
+        <button class="primary-action big-action" type="button" data-enter-cinema>
+          Biletimi alayım <span aria-hidden="true">🎟️</span>
+        </button>
+
+      </section>
+
+      <section id="screenings" class="screen screenings-screen" aria-labelledby="screenings-title" hidden>
+        <div class="screen-heading">
+          <p class="eyebrow">Salon 01</p>
+          <h2 id="screenings-title">Ne İzliyoruz?</h2>
+        </div>
+
+        <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
+
+        <button class="text-link emergency-link" type="button" data-show-emergency>
+          Hiçbiri olmadıysa acil durum filmlerini çıkar
+        </button>
+
+        <button class="text-link no-refunds" type="button" data-no-refunds>
+          İade saçmalığını oku
+        </button>
+      </section>
+
+      <section id="ticket-section" class="screen ticket-screen" aria-labelledby="ticket-title" hidden>
+        <div class="screen-heading">
+          <p class="eyebrow">Bilet işleri falan</p>
+          <h2 id="ticket-title">Biletiniz Hazır</h2>
+        </div>
+
+        <div id="ticket-output" class="ticket-wrap" aria-live="polite"></div>
+
+        <button class="text-link reset-link" type="button" data-reset-ticket>
+          Yok yok, baştan seçeyim
+        </button>
+      </section>
+    </main>
+
+    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <footer class="site-footer">
+      <span>Müşteri hizmetleri film boyunca mesajlarına bakmayabilir.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
